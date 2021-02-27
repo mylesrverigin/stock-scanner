@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% block body %}
+    <h1>
+        Create Journal
+    </h1>
+    <p1>
+        <a href="/">Home</a>
+    </p1>
+    <br>
+    <h3>
+        Breathe
+        <br>
+        You can't get big from a bad price
+        <br>
+        Form Before Power
+    </h3>
+    <br>
+    <form id='form' method='post'>
+        <h2>
+            Goal:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            {{goal}}
+        </h2>
+        <input type="hidden" name="goal" value="{{goal}}">
+        <h1>
+            How Did I Progress my Goal?
+        </h1>
+        <textarea name="progress" rows="5" cols="100">
+        </textarea>
+        <h1>
+            PNL:
+        </h1>
+        <br>
+        <input type="text" name="pnl">
+        <br>
+        <h1>
+            Number of Trades:
+        </h1>
+        <br>
+        <input type="text" name="num_trades">
+        <br>
+        <h1>
+            Number of "One Good Trades":
+        </h1>
+        <br>
+        <input type="text" name="ogt">
+        <br>
+        <h1>
+            What led to my finest moments?
+        </h1>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <br>
+        <h2>
+            Technical:
+        </h2>
+        <br>
+        <textarea name="success_technical" rows="10" cols="100">
+        </textarea>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <br>
+        <h2>
+            Mental:
+        </h2>
+        <br>
+        <textarea name="success_mental" rows="10" cols="100">
+        </textarea>
+        <br>
+        <h1>
+            What interrupted the flow?
+        </h1>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <br>
+        <h2>
+            Technical:
+        </h2>
+        <br>
+        <textarea name="challenge_technical" rows="10" cols="100">
+        </textarea>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <br>
+        <h2>
+            Mental:
+        </h2>
+        <br>
+        <textarea name="challenge_mental" rows="10" cols="100">
+        </textarea>
+        <br>
+        <h1>
+            How Am I a better Trader today? 
+        </h1>
+        <textarea name="improvements" rows="10" cols="100">
+        </textarea>
+        <h1>
+            What small goal Could I Work on Next?
+        </h1>
+        <br>
+        <textarea name="next_goal" rows="10" cols="100">
+        </textarea>
+        <br>
+        <br>
+        <button type="submit" name='save' method='post' value=save>Save</button>
+    </form>
+{% endblock %}

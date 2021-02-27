@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block body %}
+    <h1>
+        What Happened During the Week
+    </h1>
+    <p1>
+        <a href="/">Home</a>
+    </p1>
+    <br>
+    <br>
+    {% if result|length > 0 %}
+    {% for date in result %}
+    /////////////////////////////////{{date}}/////////////////////////////////////////////
+    <br>
+    {% for list in result[date] %}
+    {% for dict in list %}
+    {% for item in dict %}
+        <p1 class="key">
+        {{item}}:
+        </p1>
+        <br>
+        <p1 class='value'>
+        {{dict[item]}}
+        </p1>
+        <br>
+        <br>
+    {% endfor %}
+    {% endfor %}
+    {% endfor %}
+    <br>
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    <br>
+    {% endfor %}
+    {% endif%}
+{% endblock %}

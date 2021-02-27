@@ -1,0 +1,36 @@
+body{
+    background-image: linear-gradient(rgb(5, 4, 4), rgb(37, 37, 30));
+    color:  rgb(161, 20, 20);
+    text-align: center;
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+    color:  rgb(161, 20, 20);
+}
+textarea{
+    background-color: black;
+    color:aqua;
+}
+input{
+    background-color: black;
+    color:aqua;
+}
+a:link {
+    color:rgb(161, 20, 20);
+  }
+a:visited {
+    color:rgb(161, 20, 20);
+}
+a:hover {
+    color: hotpink;
+  }
+.plan_heading{
+    color:rgb(161, 20, 20);
+}
+.key{
+    color:rgb(161, 20, 20);
+}
+.value{
+    color:rgb(204, 201, 201);
+}

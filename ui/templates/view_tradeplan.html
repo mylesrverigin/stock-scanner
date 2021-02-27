@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block body %}
+    <h1>
+        View Tradeplans
+    </h1>
+    <p1>
+        <a href="/">Home</a>
+    </p1>
+    <br>
+    <br>
+    {% if plans|length > 0 %}
+    {% for date in plans %}
+    <h1>
+    {{date}}
+    </h1>
+    {% for plan in plans[date] %}
+    {% for item in plan %}
+    <p1>
+        <b class='key'>{{item}}:</b>
+    </p1>
+    <br>
+        &nbsp;&nbsp;&nbsp;&nbsp; <p1 class='value'>{{plan[item]}}</p1>
+    <br>
+    {% endfor %}
+    <br>
+    //////////////////////////////////////////////////////////////////////////////////////////////
+    <br>
+    {% endfor %}
+    {% endfor %}
+    {% endif%}
+{% endblock %}

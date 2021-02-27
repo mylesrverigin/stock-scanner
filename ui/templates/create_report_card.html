@@ -1,0 +1,204 @@
+{% extends 'base.html' %}
+{% block body %}
+    <h1>
+        Report Card
+    </h1>
+    <p1>
+        <a href="/">Home</a>
+    </p1>
+    <br>
+    <h3>
+        Breathe
+        <br>
+        <br>
+        <br>
+        Form Before Power
+    </h3>
+    <br>
+    <form id='form' method='post'>
+        <h1>
+            Goal For the Week:
+        </h1>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        {{goal}}
+        <input type="hidden" name="weekly_goal" value="{{goal}}">
+        <br>
+        <table>
+            <tr>
+                <td>
+                    <h3>
+                        Breathing
+                    </h3>
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td>
+                    Complete<input type="checkbox" name="breathing_excercises" value="True">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>
+                        Visualizing Success
+                    </h3>
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td>
+                    Complete<input type="checkbox" name="visualizing" value="True">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>
+                        Workout
+                    </h3>
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td>
+                    Complete<input type="checkbox" name="workout" value="True">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>
+                        Calling out Trades
+                    </h3>
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td>
+                    Complete<input type="checkbox" name="callout" value="True">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>
+                        Break between Trades
+                    </h3>
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td>
+                    Complete<input type="checkbox" name="breaks" value="True">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>
+                        Watching Footage
+                    </h3>
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td>
+                    Complete<input type="checkbox" name="video_review" value="True">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>
+                        Playbook
+                    </h3>
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td>
+                    Complete<input type="checkbox" name="playbook" value="True">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>
+                        Review Charts of the Day
+                    </h3>
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td>
+                    Complete<input type="checkbox" name="charts_reviewed" value="True">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>
+                        Tomorrows Tradeplans Prepared
+                    </h3>
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td>
+                    Complete<input type="checkbox" name="preperation" value="True">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>
+                        Performance Drills for Weak Areas
+                    </h3>
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td>
+                    Complete<input type="checkbox" name="performance_drills" value="True">
+                </td>
+            </tr>
+        </table>
+        <br>
+        <input type="hidden" name="breathing_excercises" value="">
+        <input type="hidden" name="video_review" value="">
+        <input type="hidden" name="playbook" value="">
+        <input type="hidden" name="anti_playbook" value="">
+        <input type="hidden" name="trade_better_playbook" value="">
+        <input type="hidden" name="workout" value="">
+        <input type="hidden" name="performance_drills" value="">
+        <input type="hidden" name="charts_reviewed" value="">
+        <input type="hidden" name="preperation" value="">
+        <input type="hidden" name="breaks" value="">
+        <input type="hidden" name="callout" value="">
+        <input type="hidden" name="visualizing" value="">
+        <br>
+        <button type="submit" name='save' method='post' value=save>Save</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block body %}
+    <h1>
+        View Journal
+    </h1>
+    <p1>
+        <a href="/">Home</a>
+    </p1>
+    <br>
+    <br>
+    {% if journal|length > 0 %}
+    {% for j in journal %}
+    {% for item in j %}
+    <p1>
+        <b class='key'>{{item}}:</b>
+    </p1>
+    <br>
+        &nbsp;&nbsp;&nbsp;&nbsp; <p1 class='value'>{{j[item]}}</p1>
+    <br>
+    {% endfor %}
+    <br>
+    //////////////////////////////////////////////////////////////////////////////////////////////
+    <br
+    {% endfor %}
+    {% endif %}
+{% endblock %}

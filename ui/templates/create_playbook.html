@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% block body %}
+<body>
+    <h1>
+        Create Playbook
+    </h1>
+    <p1>
+        <a href="/">Home</a>
+    </p1>
+    <br>
+    <form id='form' method='post'>
+        <input type="hidden" name="ticker" value="ES">
+        <br>
+        <p1>
+            Setup:
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;
+            Long
+            <input type="checkbox" name="direction" value="long">
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;
+            Short  
+                <input type="checkbox" name="direction" value="short">
+            <br>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;
+            Trend Continuation
+            <input type="checkbox" name="setup" value="trend_continuation">
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;
+            Trend Termination
+            <input type="checkbox" name="setup" value="trend_termination">
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;
+            S/R holding
+            <input type="checkbox" name="setup" value="sr_holding">
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;
+            S/R breaking
+            <input type="checkbox" name="setup" value="sr_breaking">
+        </p1>
+        <br>
+        <br>
+        <p1>
+            Grade
+            <br>
+            <input type="text" name="grade">
+        </p1>
+        <br>
+        <br>
+        <br>
+        Playbook
+            <input type="checkbox" name="playbook_type" value="playbook">
+        <br>
+        Anti Playbook   
+            <input type="checkbox" name="playbook_type" value="anti_playbook">
+        <br>
+        Could Trade Better  
+            <input type="checkbox" name="playbook_type" value="trade_better">
+        <br>
+        <h1>
+            Market Context
+        </h1>
+        <textarea name="intraday_fundamentals" rows="5" cols="100">
+        </textarea>
+        <h1>
+            Long Term Technicals
+        </h1>
+        <textarea name="lt_technicals" rows="5" cols="100">
+        </textarea>
+        <h1>
+            Short Term Technicals
+        </h1>
+        <textarea name="st_technicals" rows="5" cols="100">
+        </textarea>
+        <h1>
+            Thesis of The Trade
+        </h1>
+        <textarea name="description" rows="5" cols="100">
+        </textarea>
+        <h1>
+            Where is this Thesis wrong?
+        </h1>
+        <textarea name="stop_out" rows="5" cols="100">
+        </textarea>
+        <h1>
+            Checks in my Favor
+        </h1>
+        <textarea name="checks" rows="5" cols="100">
+        </textarea>
+        <br>
+        <h1>
+            Trade Story
+        </h1>
+        <p1>
+            (where was my core postition area, where did I lighten up, what was I watching for)
+        </p1>
+        <br>
+        <textarea name="trade_managment" rows="5" cols="100">
+        </textarea>
+        <h1>
+            Why Did this Trade Work
+        </h1>
+        <textarea name="positive_factors" rows="5" cols="100">
+        </textarea>
+        <h1>
+            Reasons2Exit
+        </h1>
+        <textarea name="reasons2exit" rows="5" cols="100">
+        </textarea>
+        <h1>
+            Reasons2Add
+        </h1>
+        <textarea name="reasons2add" rows="5" cols="100">
+        </textarea>
+        <h1>
+            Trade Review:
+        </h1>
+        </h1>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <p1>
+            How can I trade this better?
+        </p1>
+        <br>
+        <textarea name="trade_review" rows="5" cols="100">
+        </textarea>
+        <h1>
+            Takeaways: 
+        </h1>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <p1>
+            What makes me psycohologically comfortable in this trade?
+        </p1>
+        <br>
+        <textarea name="takeaways" rows="5" cols="100">
+        </textarea>
+        <br>
+        <button type="submit" name='save' method='post' value=save>Save</button>
+    </form>
+{% endblock %}

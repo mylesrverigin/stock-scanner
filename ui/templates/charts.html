@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+    <h1>
+        Charts for the Day
+    </h1>
+    <p1>
+        <a href="/">Home</a>
+    </p1>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    {% if charts|length > 0 %}
+    {% if divs|length > 0 %}
+    {% for div in divs%}
+        {{div|safe}}
+    {% endfor %}
+    {% for chart in charts %}
+    {{chart|safe}}
+    {% endfor %}
+    {% endif %}
+    {% endif %}
+{% endblock %}

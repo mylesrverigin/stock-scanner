@@ -1,0 +1,1 @@
+C:\code\stock-scanner\modules\ticker_scan.py

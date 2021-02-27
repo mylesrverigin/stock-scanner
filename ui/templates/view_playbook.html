@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block body %}
+    <h1>
+        View Playbooks
+    </h1>
+    <p1>
+        <a href="/">Home</a>
+    </p1>
+    <br>
+    <br>
+    {% if plays|length > 0 %}
+    {% for play in plays %}
+    {% for item in play %}
+    <p1>
+        <b class='key'>{{item}}:</b>
+    </p1>
+    <br>
+        &nbsp;&nbsp;&nbsp;&nbsp; <p class='value'>{{play[item]}}</p>
+    <br>
+    {% endfor %}
+    <br>
+    //////////////////////////////////////////////////////////////////////////////////////////////
+    <br>
+    {% endfor %}
+    {% endif%}
+{% endblock %}

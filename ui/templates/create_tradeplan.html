@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% block body %}
+    <h1>
+        Create Trade Plans
+    </h1>
+    <p1>
+        <a href="/">Home</a>
+    </p1>
+    <br>
+    <h3>
+        Breathe
+        <br>
+        You can't get big from a bad price
+        <br>
+        Form Before Power
+    </h3>
+    <br>
+    <form id='form' method='post'>
+        <input type="hidden" name="ticker" value="ES">
+        <h1>
+            Big Picture Price Structure
+        </h1>
+        <textarea name="larger_context" rows="5" cols="100">
+        </textarea>
+        <h1>
+            Short Term Price Structure
+        </h1>
+        <textarea name="shorterm_context" rows="5" cols="100">
+        </textarea>
+        <h1>
+            Inflection points
+        </h1>
+        <br>
+        <textarea name="levels" rows="3" cols="100">
+        </textarea>
+        <br>
+        <h1>
+            Scenario 1 Strong Buyers Gameplan
+        </h1>
+        <textarea name="s1" rows="3" cols="100">
+        </textarea>
+        <br>
+        <p1>
+            Grade:
+            <br>
+        <input type="text" name="s1_grade">
+        </p1>
+        <br>
+        <p1>
+            Invalidation of Thesis
+            <br>
+        <textarea name="s1_invalidate" rows="3" cols="100">
+        </textarea>
+        </p1>
+        <br>
+        <h1>
+            Scenario 2 Strong Sellers Gameplan
+        </h1>
+        <textarea name="s2" rows="3" cols="100">
+        </textarea>
+        <br>
+        <p1>
+            Grade:
+            <br>
+        <input type="text" name="s2_grade">
+        </p1>
+        <br>
+        <p1>
+            Invalidation of Thesis
+            <br>
+        <textarea name="s2_invalidate" rows="3" cols="100">
+        </textarea>
+        </p1>
+        <br>
+        <h1>
+            Scenario 3 Neutral Gameplan
+        </h1>
+        <textarea name="s3" rows="3" cols="100">
+        </textarea>
+        <br>
+        <p1>
+            Grade:
+            <br>
+        <input type="text" name="s3_grade">
+        </p1>
+        <br>
+        <p1>
+            Invalidation of Thesis
+            <br>
+        <textarea name="s3_invalidate" rows="3" cols="100">
+        </textarea>
+        </p1>
+        <br>
+        <h1>
+            What won't I do Today?
+        </h1>
+        <textarea name="not_do" rows="3" cols="100">
+        </textarea>
+        <br>
+        <button type="submit" name='save' method='post' value=save>Save</button>
+    </form>
+{% endblock %}

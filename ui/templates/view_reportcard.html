@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block body %}
+<body>
+    <h1>
+        View Report Card
+    </h1>
+    <p1>
+        <a href="/">Home</a>
+    </p1>
+    <br>
+    <br>
+    {% if cards|length > 0 %}
+    {% for card in cards %}
+    {% for item in card %}
+    <p1>
+        <b class='key'>{{item}}</b>
+    </p1>
+
+    <br>
+    {% endfor %}
+    <br>
+    //////////////////////////////////////////////////////////////////////////////////////////////
+    <br
+    {% endfor %}
+    {% endif %}
+{% endblock %}

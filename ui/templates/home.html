@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+{% block body %}
+    
+    <h1>
+        Cerberus Trading
+    </h1>
+    <h2>
+        Practice Makes Progress
+        <br>
+        Form Before Power
+    </h2>
+    <h3 class="plan_heading">
+        Business Plan:
+    </h3>
+    {% if plan|length > 0 %}
+    <div class="key">
+    {% for key in plan%}
+    {{key}}
+    <br>
+    <div class="value">
+    {% for item in plan[key] %}
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    {{item}}
+    <br>
+    {% endfor %}
+    </div>
+    <br>
+    {% endfor %}
+    </div>
+    {% endif %}
+    <div class="key">
+    Number Of Trades Taken This Week:
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <div class="value">
+    {{trades}}
+    </div>    
+    </div>
+    <br>
+    <br>
+    <h2>
+        Goal:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        {{goal}}
+    </h2>
+    <table>
+        <tr>
+            <td>
+                <p1>
+                    <a href="/createtradeplan/">Create Tradeplan</a>
+                </p1>
+            </td>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+            <td>
+                <p1>
+                    <a href="/viewtradeplan/">View Tradeplan</a>
+                </p1>
+            </td>
+        </tr> 
+        <tr>
+            <td>
+                <p1>
+                    <a href="/charts/">
+                        View Charts
+                    </a>
+                </p1>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p1>
+                    <a href="/createplaybook/">Create Playbook</a>
+                </p1>
+            </td>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+            <td>
+                <p1>
+                    <a href="/viewplaybook/">View Playbook</a>
+                </p1>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p1>
+                    <a href="/createjournal/">Create Journal</a>
+                </p1>
+            </td>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+            <td>
+                <p1>
+                    <a href="/viewjournal/">View Journal</a>
+                </p1>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p1>
+                    <a href="/reportcard/">Create Report Card</a>
+                </p1>
+            </td>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+            <td>
+                <p1>
+                    <a href="/viewreportcard/">View Report Card</a>
+                </p1>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p1>
+                    <a href="/weekreview/">
+                        Weekly Review
+                    </a>
+                </p1>
+            </td>
+        </tr>
+    </table>
+
+    <h1>
+        Stocks Worth Looking At:
+    </h1>
+    {% if inplay|length > 0 %}
+    <div class='key'>
+    {% for dict in inplay %}
+    <a href="https://finviz.com/quote.ashx?t={{dict['ticker']}}">
+        <h3>
+            {{dict['ticker']}}
+        </h3>
+    </a>
+    <div class='value'>
+    &nbsp;&nbsp;&nbsp;&nbsp; Change : {{dict['premarket_change']}} %
+    &nbsp;&nbsp;&nbsp;&nbsp; Float : {{dict['shs_float']/1000000}} M
+    &nbsp;&nbsp;&nbsp;&nbsp; Price : {{dict['premarket_price']}}
+    &nbsp;&nbsp;&nbsp;&nbsp; Volume : {{dict['premarket_volume']/1000}} K
+    &nbsp;&nbsp;&nbsp;&nbsp; Short Float: {{dict['short_float']}} %
+    <br>
+    {% endfor %}
+    </div>
+    </div>
+    {% endif %}
+{% endblock %}
